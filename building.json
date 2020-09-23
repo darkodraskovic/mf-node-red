@@ -1,0 +1,400 @@
+[
+    {
+        "id": "731b49fa.84e898",
+        "type": "tab",
+        "label": "Building",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "32504cad.0eb344",
+        "type": "group",
+        "z": "731b49fa.84e898",
+        "name": "message",
+        "style": {
+            "stroke": "#a4a4a4",
+            "label": true,
+            "fill": "#ffff7f",
+            "color": "#777777"
+        },
+        "nodes": [
+            "9e6fe948.13d4d8",
+            "84ec367.56d6cc8"
+        ],
+        "x": 694,
+        "y": 399,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "52ad8557.f52f5c",
+        "type": "group",
+        "z": "731b49fa.84e898",
+        "name": "floors",
+        "style": {
+            "fill": "#b797cf",
+            "label": true,
+            "stroke": "#a4a4a4",
+            "color": "#777777"
+        },
+        "nodes": [
+            "a7fa14ca.954158",
+            "fa85ee2b.1d8e5"
+        ],
+        "x": 534,
+        "y": 179,
+        "w": 152,
+        "h": 122
+    },
+    {
+        "id": "7cd25e1c.f98a5",
+        "type": "group",
+        "z": "731b49fa.84e898",
+        "name": "",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "a99049f8.b416b8",
+            "3f658fdd.34c35",
+            "5fe42c58.4917a4"
+        ],
+        "x": 14,
+        "y": 239,
+        "w": 232,
+        "h": 222
+    },
+    {
+        "id": "dc18d1b7.a22a7",
+        "type": "group",
+        "z": "731b49fa.84e898",
+        "name": "payload",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "10ec733b.ed7d7d",
+            "b30e096a.b44fa8",
+            "1b9edde8.6663e2"
+        ],
+        "x": 274,
+        "y": 379,
+        "w": 392,
+        "h": 182
+    },
+    {
+        "id": "a99049f8.b416b8",
+        "type": "inject",
+        "z": "731b49fa.84e898",
+        "g": "7cd25e1c.f98a5",
+        "name": "temperature",
+        "props": [
+            {
+                "p": "name",
+                "v": "temperature",
+                "vt": "str"
+            },
+            {
+                "p": "min",
+                "v": "15",
+                "vt": "num"
+            },
+            {
+                "p": "max",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "p": "offLimitsProb",
+                "v": "0.8",
+                "vt": "str"
+            },
+            {
+                "p": "unit",
+                "v": "Celsius",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "str",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "1b9edde8.6663e2"
+            ]
+        ]
+    },
+    {
+        "id": "1b9edde8.6663e2",
+        "type": "function",
+        "z": "731b49fa.84e898",
+        "g": "dc18d1b7.a22a7",
+        "name": "compute_float",
+        "func": "var offLimits = Math.random() < msg.offLimitsProb;\nvar range = msg.max - msg.min;\nvar val = msg.min + range * Math.random();\nif (offLimits) {\n    var sign = Math.random() > 0.5 ? 1 : -1;\n    val = sign * range * Math.random() * msg.offLimitsProb;\n    if (sign < 0) val += msg.min;\n    else val += msg.max;\n}\nmsg.payload = val;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "10ec733b.ed7d7d"
+            ]
+        ]
+    },
+    {
+        "id": "9e6fe948.13d4d8",
+        "type": "function",
+        "z": "731b49fa.84e898",
+        "g": "32504cad.0eb344",
+        "name": "senml[1]",
+        "func": "msg.payload = `[${JSON.stringify(msg.payload)}]`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 900,
+        "y": 440,
+        "wires": [
+            [
+                "aa458c1a.11b0d"
+            ]
+        ]
+    },
+    {
+        "id": "3f658fdd.34c35",
+        "type": "inject",
+        "z": "731b49fa.84e898",
+        "g": "7cd25e1c.f98a5",
+        "name": "humidity",
+        "props": [
+            {
+                "p": "name",
+                "v": "humidity",
+                "vt": "str"
+            },
+            {
+                "p": "min",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "p": "max",
+                "v": "70",
+                "vt": "num"
+            },
+            {
+                "p": "offLimitsProb",
+                "v": "0.2",
+                "vt": "str"
+            },
+            {
+                "p": "unit",
+                "v": "percentage",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "str",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "1b9edde8.6663e2"
+            ]
+        ]
+    },
+    {
+        "id": "5fe42c58.4917a4",
+        "type": "inject",
+        "z": "731b49fa.84e898",
+        "g": "7cd25e1c.f98a5",
+        "name": "occupancy",
+        "props": [
+            {
+                "p": "name",
+                "v": "occupancy",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            },
+            {
+                "p": "trueProb",
+                "v": "0.7",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "b30e096a.b44fa8"
+            ]
+        ]
+    },
+    {
+        "id": "b30e096a.b44fa8",
+        "type": "function",
+        "z": "731b49fa.84e898",
+        "g": "dc18d1b7.a22a7",
+        "name": "compute_bool",
+        "func": "msg.payload = Math.random() < msg.trueProb ? true : false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "10ec733b.ed7d7d"
+            ]
+        ]
+    },
+    {
+        "id": "10ec733b.ed7d7d",
+        "type": "function",
+        "z": "731b49fa.84e898",
+        "g": "dc18d1b7.a22a7",
+        "name": "create_payload",
+        "func": "payload = {\n    \"n\": msg.name, \n    \"u\": msg.unit,\n    \"t\": new Date().getTime() / 1000,\n};\n\nswitch(typeof(msg.payload)) {\n    case \"number\":\n        payload[\"v\"] = msg.payload;\n        break;    \n    case \"boolean\": \n        payload[\"bv\"] = msg.payload;\n        break;\n    case \"string\":\n        payload[\"sv\"] = msg.payload;\n        break;\n    default:\n        payload[\"v\"] = msg.payload;\n}\n\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "a7fa14ca.954158",
+                "fa85ee2b.1d8e5"
+            ]
+        ]
+    },
+    {
+        "id": "aa458c1a.11b0d",
+        "type": "debug",
+        "z": "731b49fa.84e898",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a7fa14ca.954158",
+        "type": "change",
+        "z": "731b49fa.84e898",
+        "g": "52ad8557.f52f5c",
+        "name": "floor_1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "basename",
+                "pt": "msg",
+                "to": "floor_1",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "5e5819e2-7071-464f-a6f5-679e44cac694",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "84ec367.56d6cc8"
+            ]
+        ]
+    },
+    {
+        "id": "84ec367.56d6cc8",
+        "type": "function",
+        "z": "731b49fa.84e898",
+        "g": "32504cad.0eb344",
+        "name": "topic",
+        "func": "msg.payload.basename = msg.basename;\nmsg.topic = \"channels/\" + msg.topic + \"/messages/\" + msg.basename + \"/\" + msg.name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 770,
+        "y": 440,
+        "wires": [
+            [
+                "9e6fe948.13d4d8"
+            ]
+        ]
+    },
+    {
+        "id": "fa85ee2b.1d8e5",
+        "type": "change",
+        "z": "731b49fa.84e898",
+        "g": "52ad8557.f52f5c",
+        "name": "floor_2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "basename",
+                "pt": "msg",
+                "to": "floor_2",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "000af29e-a9f0-41c3-aa24-bc73c9c92ee4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "84ec367.56d6cc8"
+            ]
+        ]
+    }
+]
