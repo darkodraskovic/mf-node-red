@@ -1,35 +1,15 @@
 [
     {
-        "id": "731b49fa.84e898",
+        "id": "4ef39ed5.f8ebe",
         "type": "tab",
         "label": "Building",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "32504cad.0eb344",
+        "id": "216b9ff1.d2b19",
         "type": "group",
-        "z": "731b49fa.84e898",
-        "name": "message",
-        "style": {
-            "stroke": "#a4a4a4",
-            "label": true,
-            "fill": "#ffff7f",
-            "color": "#777777"
-        },
-        "nodes": [
-            "9e6fe948.13d4d8",
-            "84ec367.56d6cc8"
-        ],
-        "x": 694,
-        "y": 399,
-        "w": 292,
-        "h": 82
-    },
-    {
-        "id": "52ad8557.f52f5c",
-        "type": "group",
-        "z": "731b49fa.84e898",
+        "z": "4ef39ed5.f8ebe",
         "name": "floors",
         "style": {
             "fill": "#b797cf",
@@ -38,37 +18,38 @@
             "color": "#777777"
         },
         "nodes": [
-            "a7fa14ca.954158",
-            "fa85ee2b.1d8e5"
+            "4fb81551.c8bdbc",
+            "fcb5d045.0fb0c"
         ],
-        "x": 534,
-        "y": 179,
+        "x": 614,
+        "y": 259,
         "w": 152,
         "h": 122
     },
     {
-        "id": "7cd25e1c.f98a5",
+        "id": "97e26311.150bb",
         "type": "group",
-        "z": "731b49fa.84e898",
-        "name": "",
+        "z": "4ef39ed5.f8ebe",
+        "name": "message",
         "style": {
-            "fill": "#c8e7a7",
-            "label": true
+            "stroke": "#a4a4a4",
+            "label": true,
+            "fill": "#ffff7f",
+            "color": "#777777"
         },
         "nodes": [
-            "a99049f8.b416b8",
-            "3f658fdd.34c35",
-            "5fe42c58.4917a4"
+            "918b9967.866538",
+            "946dd2cc.a65bb"
         ],
-        "x": 14,
-        "y": 239,
-        "w": 232,
-        "h": 222
+        "x": 794,
+        "y": 379,
+        "w": 272,
+        "h": 82
     },
     {
-        "id": "dc18d1b7.a22a7",
+        "id": "b652ecb2.88315",
         "type": "group",
-        "z": "731b49fa.84e898",
+        "z": "4ef39ed5.f8ebe",
         "name": "payload",
         "style": {
             "fill": "#7fb7df",
@@ -76,26 +57,59 @@
             "color": "#777777"
         },
         "nodes": [
-            "10ec733b.ed7d7d",
-            "b30e096a.b44fa8",
-            "1b9edde8.6663e2"
+            "8a8c3971.70a938",
+            "41947a5e.bde8e4",
+            "d2ff5baf.e81108",
+            "63964d63.517b34"
         ],
-        "x": 274,
-        "y": 379,
-        "w": 392,
-        "h": 182
+        "x": 214,
+        "y": 459,
+        "w": 552,
+        "h": 122
     },
     {
-        "id": "a99049f8.b416b8",
+        "id": "ce2646f1.919c68",
+        "type": "group",
+        "z": "4ef39ed5.f8ebe",
+        "name": "",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "b3703d96.55e74",
+            "1c0e33bd.82bd6c",
+            "7365c100.37ce3"
+        ],
+        "x": 14,
+        "y": 279,
+        "w": 232,
+        "h": 162
+    },
+    {
+        "id": "b3703d96.55e74",
         "type": "inject",
-        "z": "731b49fa.84e898",
-        "g": "7cd25e1c.f98a5",
+        "z": "4ef39ed5.f8ebe",
+        "g": "ce2646f1.919c68",
         "name": "temperature",
         "props": [
             {
                 "p": "name",
                 "v": "temperature",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
+            },
+            {
+                "p": "deltaTime",
+                "v": "0.1",
+                "vt": "num"
+            },
+            {
+                "p": "count",
+                "v": "3",
+                "vt": "num"
             },
             {
                 "p": "min",
@@ -109,7 +123,7 @@
             },
             {
                 "p": "offLimitsProb",
-                "v": "0.8",
+                "v": "0.1",
                 "vt": "str"
             },
             {
@@ -123,64 +137,57 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payloadType": "str",
+        "payload": "0",
+        "payloadType": "num",
         "x": 140,
-        "y": 280,
+        "y": 320,
         "wires": [
-            [
-                "1b9edde8.6663e2"
-            ]
+            []
         ]
     },
     {
-        "id": "1b9edde8.6663e2",
+        "id": "d2ff5baf.e81108",
         "type": "function",
-        "z": "731b49fa.84e898",
-        "g": "dc18d1b7.a22a7",
+        "z": "4ef39ed5.f8ebe",
+        "g": "b652ecb2.88315",
         "name": "compute_float",
-        "func": "var offLimits = Math.random() < msg.offLimitsProb;\nvar range = msg.max - msg.min;\nvar val = msg.min + range * Math.random();\nif (offLimits) {\n    var sign = Math.random() > 0.5 ? 1 : -1;\n    val = sign * range * Math.random() * msg.offLimitsProb;\n    if (sign < 0) val += msg.min;\n    else val += msg.max;\n}\nmsg.payload = val;\nreturn msg;",
+        "func": "for (var i = 0; i < msg.count; i++) {\n    var offLimits = Math.random() < msg.offLimitsProb;\n    var range = msg.max - msg.min;\n    var val = msg.min + range * Math.random();\n    if (offLimits) {\n        var sign = Math.random() > 0.5 ? 1 : -1;\n        val = sign * range * Math.random() * msg.offLimitsProb;\n        if (sign < 0) val += msg.min;\n        else val += msg.max;\n    }\n    msg.payload[i] = val;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 400,
-        "y": 420,
+        "x": 480,
+        "y": 500,
         "wires": [
             [
-                "10ec733b.ed7d7d"
+                "8a8c3971.70a938"
             ]
         ]
     },
     {
-        "id": "9e6fe948.13d4d8",
-        "type": "function",
-        "z": "731b49fa.84e898",
-        "g": "32504cad.0eb344",
-        "name": "senml[1]",
-        "func": "msg.payload = `[${JSON.stringify(msg.payload)}]`;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 900,
-        "y": 440,
-        "wires": [
-            [
-                "aa458c1a.11b0d"
-            ]
-        ]
-    },
-    {
-        "id": "3f658fdd.34c35",
+        "id": "1c0e33bd.82bd6c",
         "type": "inject",
-        "z": "731b49fa.84e898",
-        "g": "7cd25e1c.f98a5",
+        "z": "4ef39ed5.f8ebe",
+        "g": "ce2646f1.919c68",
         "name": "humidity",
         "props": [
             {
                 "p": "name",
                 "v": "humidity",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
+            },
+            {
+                "p": "count",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "deltaTime",
+                "v": "0.5",
+                "vt": "num"
             },
             {
                 "p": "min",
@@ -203,31 +210,40 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "5",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payloadType": "str",
+        "payload": "0",
+        "payloadType": "num",
         "x": 120,
         "y": 360,
         "wires": [
-            [
-                "1b9edde8.6663e2"
-            ]
+            []
         ]
     },
     {
-        "id": "5fe42c58.4917a4",
+        "id": "7365c100.37ce3",
         "type": "inject",
-        "z": "731b49fa.84e898",
-        "g": "7cd25e1c.f98a5",
+        "z": "4ef39ed5.f8ebe",
+        "g": "ce2646f1.919c68",
         "name": "occupancy",
         "props": [
             {
                 "p": "name",
                 "v": "occupancy",
                 "vt": "str"
+            },
+            {
+                "p": "count",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "p": "deltaTime",
+                "v": "0.3",
+                "vt": "num"
             },
             {
                 "p": "payload"
@@ -238,7 +254,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "4",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -246,56 +262,56 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 130,
-        "y": 420,
+        "y": 400,
         "wires": [
             [
-                "b30e096a.b44fa8"
+                "63964d63.517b34"
             ]
         ]
     },
     {
-        "id": "b30e096a.b44fa8",
+        "id": "41947a5e.bde8e4",
         "type": "function",
-        "z": "731b49fa.84e898",
-        "g": "dc18d1b7.a22a7",
+        "z": "4ef39ed5.f8ebe",
+        "g": "b652ecb2.88315",
         "name": "compute_bool",
-        "func": "msg.payload = Math.random() < msg.trueProb ? true : false;\nreturn msg;",
+        "func": "for (var i = 0; i < msg.count; i++) {\n    msg.payload[i] = Math.random() < msg.trueProb ? true : false;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 380,
+        "x": 480,
+        "y": 540,
+        "wires": [
+            [
+                "8a8c3971.70a938"
+            ]
+        ]
+    },
+    {
+        "id": "8a8c3971.70a938",
+        "type": "function",
+        "z": "4ef39ed5.f8ebe",
+        "g": "b652ecb2.88315",
+        "name": "create_payload",
+        "func": "for (var i = 0; i < msg.count; i++) {\n    payload = {\n        \"n\": msg.name, \n        \"u\": msg.unit,\n        \"t\": new Date().getTime() / 1000 + msg.deltaTime * i,\n    };\n    \n    var msgPayload = msg.payload[i]\n    switch(typeof(msgPayload)) {\n        case \"number\":\n            payload[\"v\"] = msgPayload;\n            break;    \n        case \"boolean\": \n            payload[\"bv\"] = msgPayload;\n            break;\n        case \"string\":\n            payload[\"sv\"] = msgPayload;\n            break;\n        default:\n            payload[\"v\"] = msgPayload;\n    }\n    \n    msg.payload[i] = payload;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 660,
         "y": 520,
         "wires": [
             [
-                "10ec733b.ed7d7d"
+                "4fb81551.c8bdbc",
+                "fcb5d045.0fb0c"
             ]
         ]
     },
     {
-        "id": "10ec733b.ed7d7d",
-        "type": "function",
-        "z": "731b49fa.84e898",
-        "g": "dc18d1b7.a22a7",
-        "name": "create_payload",
-        "func": "payload = {\n    \"n\": msg.name, \n    \"u\": msg.unit,\n    \"t\": new Date().getTime() / 1000,\n};\n\nswitch(typeof(msg.payload)) {\n    case \"number\":\n        payload[\"v\"] = msg.payload;\n        break;    \n    case \"boolean\": \n        payload[\"bv\"] = msg.payload;\n        break;\n    case \"string\":\n        payload[\"sv\"] = msg.payload;\n        break;\n    default:\n        payload[\"v\"] = msg.payload;\n}\n\nmsg.payload = payload;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 560,
-        "y": 480,
-        "wires": [
-            [
-                "a7fa14ca.954158",
-                "fa85ee2b.1d8e5"
-            ]
-        ]
-    },
-    {
-        "id": "aa458c1a.11b0d",
+        "id": "6db8654d.d2cf2c",
         "type": "debug",
-        "z": "731b49fa.84e898",
+        "z": "4ef39ed5.f8ebe",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -304,15 +320,15 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
-        "y": 220,
+        "x": 1030,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "a7fa14ca.954158",
+        "id": "4fb81551.c8bdbc",
         "type": "change",
-        "z": "731b49fa.84e898",
-        "g": "52ad8557.f52f5c",
+        "z": "4ef39ed5.f8ebe",
+        "g": "216b9ff1.d2b19",
         "name": "floor_1",
         "rules": [
             {
@@ -335,38 +351,38 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 220,
+        "x": 690,
+        "y": 300,
         "wires": [
             [
-                "84ec367.56d6cc8"
+                "918b9967.866538"
             ]
         ]
     },
     {
-        "id": "84ec367.56d6cc8",
+        "id": "918b9967.866538",
         "type": "function",
-        "z": "731b49fa.84e898",
-        "g": "32504cad.0eb344",
+        "z": "4ef39ed5.f8ebe",
+        "g": "97e26311.150bb",
         "name": "topic",
-        "func": "msg.payload.basename = msg.basename;\nmsg.topic = \"channels/\" + msg.topic + \"/messages/\" + msg.basename + \"/\" + msg.name\nreturn msg;",
+        "func": "msg.payload.forEach(function(payload){\n    payload.basename = msg.basename;\n});\n\nvar topic = \"channels/\" + msg.topic + \"/messages/\";\nvar subtopic = msg.basename + \"/\" + msg.name;\nmsg.topic = topic + subtopic;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 770,
-        "y": 440,
+        "x": 870,
+        "y": 420,
         "wires": [
             [
-                "9e6fe948.13d4d8"
+                "946dd2cc.a65bb"
             ]
         ]
     },
     {
-        "id": "fa85ee2b.1d8e5",
+        "id": "fcb5d045.0fb0c",
         "type": "change",
-        "z": "731b49fa.84e898",
-        "g": "52ad8557.f52f5c",
+        "z": "4ef39ed5.f8ebe",
+        "g": "216b9ff1.d2b19",
         "name": "floor_2",
         "rules": [
             {
@@ -389,12 +405,68 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 260,
+        "x": 690,
+        "y": 340,
         "wires": [
             [
-                "84ec367.56d6cc8"
+                "918b9967.866538"
             ]
+        ]
+    },
+    {
+        "id": "946dd2cc.a65bb",
+        "type": "json",
+        "z": "4ef39ed5.f8ebe",
+        "g": "97e26311.150bb",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 990,
+        "y": 420,
+        "wires": [
+            [
+                "6db8654d.d2cf2c"
+            ]
+        ]
+    },
+    {
+        "id": "63964d63.517b34",
+        "type": "function",
+        "z": "4ef39ed5.f8ebe",
+        "g": "b652ecb2.88315",
+        "name": "route_msg",
+        "func": "msg.count = msg.count || 1;\nmsg.deltaTime = msg.deltaTime || 0;\n\n// https://nodered.org/docs/user-guide/writing-functions#multiple-outputs\nvar msgArray = [null, null]; // outputs\nswitch(typeof(msg.payload)) {\n    case \"number\": \n        msgArray[0] = msg; // send to output 1\n        break;\n    case \"boolean\":\n        msgArray[1] = msg; // send to output 2\n        break;\n    default:\n        msgArray[0] = msg;\n        break;    \n}\n\nmsg.payload = [] // SenML array;\n\nreturn msgArray;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "d2ff5baf.e81108"
+            ],
+            [
+                "41947a5e.bde8e4"
+            ]
+        ]
+    },
+    {
+        "id": "f3dfe3bf.71e62",
+        "type": "template",
+        "z": "4ef39ed5.f8ebe",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            []
         ]
     }
 ]
