@@ -63,7 +63,7 @@
         ],
         "x": 334,
         "y": 99,
-        "w": 192,
+        "w": 152,
         "h": 202
     },
     {
@@ -101,7 +101,7 @@
             "bc243f2f.09765",
             "9a7c25ac.063228",
             "f5c00f1b.d9726",
-            "65c295a.af2ed6c"
+            "561b4b4d.8836f4"
         ],
         "x": 654,
         "y": 399,
@@ -362,14 +362,15 @@
         "type": "debug",
         "z": "7ddd1e7d.17547",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
+        "x": 710,
         "y": 680,
         "wires": []
     },
@@ -414,10 +415,10 @@
         "z": "7ddd1e7d.17547",
         "g": "2a974fa.25be3b",
         "name": "topic",
-        "func": "var subtopic = msg.subtopic + \"/\" + msg.basename;\n\n// mqtt\nvar topic = \"channels/\" + msg.channel + \"/messages/\";\nmsg.topic = topic + subtopic;\n\n// http\nurl = `http://localhost/http/channels/${msg.channel}/messages/`\nmsg.url = url + subtopic;\nmsg.headers = {\n    \"Authorization\": env.get(\"MF_HTTP\")  \n};\n\nreturn msg;",
+        "func": "var subtopic = msg.subtopic + \"/\" + msg.basename;\n\n// mqtt\nvar topic = \"channels/\" + msg.channel + \"/messages/\";\nmsg.topic = topic + subtopic;\n\n// http & coap\nvar addPrefix = msg.protocol == \"http\" ?\n    \"http://localhost/http/\" : \"coap://localhost/\";\nvar addrSuffix = `channels/${msg.channel}/messages/`;\nmsg.url = addPrefix + addrSuffix + subtopic;\n\nif (msg.protocol == \"http\") {\n    msg.headers = headers;\n} else if (msg.protocol == \"coap\") {\n    msg.url += coapAuth;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": env.get(\"MF_HTTP\")\n};\ncoapAuth = `?authorization=${env.get(\"MF_COAP\")}`;",
         "finalize": "",
         "x": 410,
         "y": 500,
@@ -721,13 +722,13 @@
         "type": "change",
         "z": "7ddd1e7d.17547",
         "g": "b272495f.537278",
-        "name": "websocket",
+        "name": "coap",
         "rules": [
             {
                 "t": "set",
                 "p": "protocol",
                 "pt": "msg",
-                "to": "websocket",
+                "to": "coap",
                 "tot": "str"
             }
         ],
@@ -736,10 +737,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
+        "x": 410,
         "y": 260,
         "wires": [
-            []
+            [
+                "775308d3.1601b8"
+            ]
         ]
     },
     {
@@ -789,7 +792,7 @@
             },
             {
                 "t": "eq",
-                "v": "websocker",
+                "v": "coap",
                 "vt": "str"
             }
         ],
@@ -806,7 +809,7 @@
                 "9a7c25ac.063228"
             ],
             [
-                "65c295a.af2ed6c"
+                "561b4b4d.8836f4"
             ]
         ]
     },
@@ -814,14 +817,13 @@
         "id": "9a7c25ac.063228",
         "type": "mqtt out",
         "z": "7ddd1e7d.17547",
-        "d": true,
         "g": "cc4d1037.7f9ad",
-        "name": "",
+        "name": "building",
         "topic": "",
         "qos": "",
         "retain": "",
-        "broker": "f7c828eb.468b48",
-        "x": 930,
+        "broker": "fb9c27f6.b4a0e8",
+        "x": 940,
         "y": 500,
         "wires": []
     },
@@ -846,20 +848,24 @@
         ]
     },
     {
-        "id": "65c295a.af2ed6c",
-        "type": "websocket out",
+        "id": "561b4b4d.8836f4",
+        "type": "coap request",
         "z": "7ddd1e7d.17547",
-        "d": true,
         "g": "cc4d1037.7f9ad",
-        "name": "",
-        "server": "",
-        "client": "",
-        "x": 950,
+        "method": "POST",
+        "observe": false,
+        "url": "",
+        "content-format": "application/json",
+        "raw-buffer": false,
+        "name": "coap",
+        "x": 930,
         "y": 560,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "f7c828eb.468b48",
+        "id": "fb9c27f6.b4a0e8",
         "type": "mqtt-broker",
         "z": "",
         "name": "building",
