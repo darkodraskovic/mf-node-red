@@ -1,35 +1,36 @@
 [
     {
-        "id": "7ddd1e7d.17547",
+        "id": "262a4e73.99b412",
         "type": "tab",
         "label": "Building",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "2a974fa.25be3b",
+        "id": "2cba23da.7b9e2c",
         "type": "group",
-        "z": "7ddd1e7d.17547",
-        "name": "message",
+        "z": "262a4e73.99b412",
+        "name": "payload",
         "style": {
-            "stroke": "#a4a4a4",
+            "fill": "#7fb7df",
             "label": true,
-            "fill": "#ffff7f",
             "color": "#777777"
         },
         "nodes": [
-            "ec30ddc8.586b6",
-            "a4e87de4.a5cda"
+            "bbc34c36.b6ace",
+            "6a5801fd.9fd3d",
+            "4d74f06e.bf00e",
+            "a6d87f77.9af52"
         ],
-        "x": 334,
-        "y": 459,
-        "w": 272,
-        "h": 82
+        "x": 554,
+        "y": 99,
+        "w": 552,
+        "h": 122
     },
     {
-        "id": "3e06646.14fbe9c",
+        "id": "4cd80b54.dad114",
         "type": "group",
-        "z": "7ddd1e7d.17547",
+        "z": "262a4e73.99b412",
         "name": "floors",
         "style": {
             "fill": "#b797cf",
@@ -38,9 +39,9 @@
             "color": "#777777"
         },
         "nodes": [
-            "6e621fd9.96aa3",
-            "bafdd071.a3a91",
-            "93a0bb1f.4903d8"
+            "132e7bae.c14df4",
+            "93027e2e.758a2",
+            "5433e20c.e14aec"
         ],
         "x": 114,
         "y": 419,
@@ -48,18 +49,18 @@
         "h": 162
     },
     {
-        "id": "b272495f.537278",
+        "id": "8cb664b3.b35b88",
         "type": "group",
-        "z": "7ddd1e7d.17547",
+        "z": "262a4e73.99b412",
         "name": "",
         "style": {
             "fill": "#d1d1d1",
             "label": true
         },
         "nodes": [
-            "f6204bb9.99a4c8",
-            "9616ecde.e35dd",
-            "546a3ec7.0c9dd"
+            "1fd6ff8b.aa5b4",
+            "dca31d2e.afa79",
+            "8f1f9699.450bc8"
         ],
         "x": 354,
         "y": 99,
@@ -67,63 +68,21 @@
         "h": 202
     },
     {
-        "id": "b92ce771.12bde8",
+        "id": "94329e0b.58842",
         "type": "group",
-        "z": "7ddd1e7d.17547",
-        "name": "payload",
-        "style": {
-            "fill": "#7fb7df",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "e49050bb.3224e",
-            "916c929b.70c6a",
-            "d7ef6c9a.d8822",
-            "775308d3.1601b8"
-        ],
-        "x": 554,
-        "y": 99,
-        "w": 552,
-        "h": 122
-    },
-    {
-        "id": "cc4d1037.7f9ad",
-        "type": "group",
-        "z": "7ddd1e7d.17547",
-        "name": "protocols",
-        "style": {
-            "fill": "#c8e7a7",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "bc243f2f.09765",
-            "9a7c25ac.063228",
-            "f5c00f1b.d9726",
-            "561b4b4d.8836f4"
-        ],
-        "x": 654,
-        "y": 399,
-        "w": 392,
-        "h": 202
-    },
-    {
-        "id": "ccd4d6f.8438c28",
-        "type": "group",
-        "z": "7ddd1e7d.17547",
+        "z": "262a4e73.99b412",
         "name": "",
         "style": {
             "fill": "#c8e7a7",
             "label": true
         },
         "nodes": [
-            "967a5447.a0cef8",
-            "f49a216a.29d87",
-            "2877c416.dcb8fc",
-            "d2405420.f39288",
-            "428b930.6d8166c",
-            "b63363b2.7e38a"
+            "ee40698f.2a5a88",
+            "5e7f7bfb.38e7a4",
+            "caa225b3.88ad38",
+            "a614791d.c7e188",
+            "dca91db8.ed8e1",
+            "8e8069e8.ebdfd8"
         ],
         "x": 34,
         "y": 39,
@@ -131,10 +90,51 @@
         "h": 322
     },
     {
-        "id": "967a5447.a0cef8",
+        "id": "99ce0d82.29cee",
+        "type": "group",
+        "z": "262a4e73.99b412",
+        "name": "message",
+        "style": {
+            "stroke": "#a4a4a4",
+            "label": true,
+            "fill": "#ffff7f",
+            "color": "#777777"
+        },
+        "nodes": [
+            "972801f4.6b272",
+            "8e7ae915.12af08"
+        ],
+        "x": 334,
+        "y": 459,
+        "w": 272,
+        "h": 82
+    },
+    {
+        "id": "bdfeae3c.2774",
+        "type": "group",
+        "z": "262a4e73.99b412",
+        "name": "protocols",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "10327288.0d6f1d",
+            "6d1a03e5.0236cc",
+            "65c1cc32.6d45e4",
+            "e43331d9.edc1c"
+        ],
+        "x": 654,
+        "y": 399,
+        "w": 392,
+        "h": 202
+    },
+    {
+        "id": "ee40698f.2a5a88",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "temperature",
         "props": [
             {
@@ -187,15 +187,15 @@
         "y": 80,
         "wires": [
             [
-                "f6204bb9.99a4c8"
+                "1fd6ff8b.aa5b4"
             ]
         ]
     },
     {
-        "id": "d7ef6c9a.d8822",
+        "id": "4d74f06e.bf00e",
         "type": "function",
-        "z": "7ddd1e7d.17547",
-        "g": "b92ce771.12bde8",
+        "z": "262a4e73.99b412",
+        "g": "2cba23da.7b9e2c",
         "name": "compute_float",
         "func": "for (var i = 0; i < msg.count; i++) {\n    var offLimits = Math.random() < msg.offLimitsProb;\n    var range = msg.max - msg.min;\n    var val = msg.min + range * Math.random();\n    if (offLimits) {\n        var sign = Math.random() > 0.5 ? 1 : -1;\n        val = sign * range * Math.random() * msg.offLimitsProb;\n        if (sign < 0) val += msg.min;\n        else val += msg.max;\n    }\n    msg.payload[i] = val;\n}\nreturn msg;",
         "outputs": 1,
@@ -206,15 +206,15 @@
         "y": 140,
         "wires": [
             [
-                "e49050bb.3224e"
+                "bbc34c36.b6ace"
             ]
         ]
     },
     {
-        "id": "f49a216a.29d87",
+        "id": "5e7f7bfb.38e7a4",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "humidity",
         "props": [
             {
@@ -227,7 +227,7 @@
             },
             {
                 "p": "count",
-                "v": "1",
+                "v": "3",
                 "vt": "num"
             },
             {
@@ -266,21 +266,19 @@
         "x": 140,
         "y": 120,
         "wires": [
-            [
-                "f6204bb9.99a4c8"
-            ]
+            []
         ]
     },
     {
-        "id": "2877c416.dcb8fc",
+        "id": "caa225b3.88ad38",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "rooms occupancy",
         "props": [
             {
                 "p": "basename",
-                "v": "room",
+                "v": "occupancy",
                 "vt": "str"
             },
             {
@@ -302,7 +300,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "15",
+        "repeat": "10",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -313,15 +311,15 @@
         "y": 240,
         "wires": [
             [
-                "546a3ec7.0c9dd"
+                "8f1f9699.450bc8"
             ]
         ]
     },
     {
-        "id": "916c929b.70c6a",
+        "id": "6a5801fd.9fd3d",
         "type": "function",
-        "z": "7ddd1e7d.17547",
-        "g": "b92ce771.12bde8",
+        "z": "262a4e73.99b412",
+        "g": "2cba23da.7b9e2c",
         "name": "compute_bool",
         "func": "for (var i = 0; i < msg.count; i++) {\n    msg.payload[i] = Math.random() < msg.trueProb ? true : false;\n}\n\nreturn msg;",
         "outputs": 1,
@@ -332,15 +330,15 @@
         "y": 180,
         "wires": [
             [
-                "e49050bb.3224e"
+                "bbc34c36.b6ace"
             ]
         ]
     },
     {
-        "id": "e49050bb.3224e",
+        "id": "bbc34c36.b6ace",
         "type": "function",
-        "z": "7ddd1e7d.17547",
-        "g": "b92ce771.12bde8",
+        "z": "262a4e73.99b412",
+        "g": "2cba23da.7b9e2c",
         "name": "create_payload",
         "func": "for (var i = 0; i < msg.count; i++) {\n    payload = {\n        \"bn\": msg.basename,\n        \"n\": `${i+1}`, \n        \"u\": msg.unit,\n        \"t\": new Date().getTime() / 1000 + msg.deltaTime * i,\n    };\n    \n    var msgPayload = msg.payload[i]\n    switch(typeof(msgPayload)) {\n        case \"number\":\n            payload[\"v\"] = msgPayload;\n            break;    \n        case \"boolean\": \n            payload[\"vb\"] = msgPayload;\n            break;\n        case \"string\":\n            payload[\"vs\"] = msgPayload;\n            break;\n        default:\n            payload[\"v\"] = msgPayload;\n    }\n    \n    msg.payload[i] = payload;\n}\n\nreturn msg;",
         "outputs": 1,
@@ -351,34 +349,34 @@
         "y": 180,
         "wires": [
             [
-                "bafdd071.a3a91",
-                "6e621fd9.96aa3",
-                "93a0bb1f.4903d8"
+                "132e7bae.c14df4",
+                "93027e2e.758a2",
+                "5433e20c.e14aec"
             ]
         ]
     },
     {
-        "id": "66708827.b270f8",
+        "id": "7e076b5f.ba9574",
         "type": "debug",
-        "z": "7ddd1e7d.17547",
+        "z": "262a4e73.99b412",
         "name": "",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
+        "x": 710,
         "y": 680,
         "wires": []
     },
     {
-        "id": "6e621fd9.96aa3",
+        "id": "132e7bae.c14df4",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "3e06646.14fbe9c",
+        "z": "262a4e73.99b412",
+        "g": "4cd80b54.dad114",
         "name": "floor_1",
         "rules": [
             {
@@ -398,17 +396,17 @@
         "y": 460,
         "wires": [
             [
-                "ec30ddc8.586b6"
+                "972801f4.6b272"
             ]
         ]
     },
     {
-        "id": "ec30ddc8.586b6",
+        "id": "972801f4.6b272",
         "type": "function",
-        "z": "7ddd1e7d.17547",
-        "g": "2a974fa.25be3b",
+        "z": "262a4e73.99b412",
+        "g": "99ce0d82.29cee",
         "name": "topic",
-        "func": "var subtopic = msg.basename;\n\n// mqtt\nvar topic = \"channels/\" + msg.channel + \"/messages/\";\nmsg.topic = topic + subtopic;\n\n// http & coap\nvar addPrefix = msg.protocol == \"http\" ?\n    \"http://localhost/http/\" : \"coap://localhost/\";\nvar addrSuffix = `channels/${msg.channel}/messages/`;\nmsg.url = addPrefix + addrSuffix + subtopic;\n\nif (msg.protocol == \"http\") {\n    msg.headers = headers;\n} else if (msg.protocol == \"coap\") {\n    msg.url += coapAuth;\n}\n\nreturn msg;",
+        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    \n    // mqtt\n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    topic += subtopic;\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    var url = env.get(\"MF_URL\");\n    \n    // http & coap\n    var addPrefix = msg.protocol == \"http\" ?\n        `https://${url}/http/` : `coap://${url}/`;\n    var addrSuffix = `channels/${msg.channel}/messages`;\n    message.url = addPrefix + addrSuffix + subtopic;\n    \n    if (msg.protocol == \"http\") {\n        message.headers = headers;\n    } else if (msg.protocol == \"coap\") {\n        message.url += coapAuth;\n    }\n    \n})\n\n\nreturn [msgs];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": env.get(\"MF_HTTP\")\n};\ncoapAuth = `?auth=${env.get(\"MF_COAP\")}`;",
@@ -417,15 +415,16 @@
         "y": 500,
         "wires": [
             [
-                "a4e87de4.a5cda"
+                "8e7ae915.12af08",
+                "7e076b5f.ba9574"
             ]
         ]
     },
     {
-        "id": "bafdd071.a3a91",
+        "id": "93027e2e.758a2",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "3e06646.14fbe9c",
+        "z": "262a4e73.99b412",
+        "g": "4cd80b54.dad114",
         "name": "floor_2",
         "rules": [
             {
@@ -445,15 +444,15 @@
         "y": 500,
         "wires": [
             [
-                "ec30ddc8.586b6"
+                "972801f4.6b272"
             ]
         ]
     },
     {
-        "id": "a4e87de4.a5cda",
+        "id": "8e7ae915.12af08",
         "type": "json",
-        "z": "7ddd1e7d.17547",
-        "g": "2a974fa.25be3b",
+        "z": "262a4e73.99b412",
+        "g": "99ce0d82.29cee",
         "name": "",
         "property": "payload",
         "action": "",
@@ -462,15 +461,15 @@
         "y": 500,
         "wires": [
             [
-                "66708827.b270f8"
+                "10327288.0d6f1d"
             ]
         ]
     },
     {
-        "id": "775308d3.1601b8",
+        "id": "a6d87f77.9af52",
         "type": "function",
-        "z": "7ddd1e7d.17547",
-        "g": "b92ce771.12bde8",
+        "z": "262a4e73.99b412",
+        "g": "2cba23da.7b9e2c",
         "name": "route_msg",
         "func": "msg.count = msg.count || 1;\nmsg.deltaTime = msg.deltaTime || 0;\n\n// https://nodered.org/docs/user-guide/writing-functions#multiple-outputs\nvar msgArray = [null, null]; // outputs\nswitch(typeof(msg.payload)) {\n    case \"number\":\n        msgArray[0] = msg; // send to output 1\n        break;\n    case \"boolean\":\n        msgArray[1] = msg; // send to output 2\n        break;\n    default:\n        msgArray[0] = msg;\n        break;    \n}\n\nmsg.payload = [] // SenML array;\n\nreturn msgArray;",
         "outputs": 2,
@@ -481,18 +480,18 @@
         "y": 180,
         "wires": [
             [
-                "d7ef6c9a.d8822"
+                "4d74f06e.bf00e"
             ],
             [
-                "916c929b.70c6a"
+                "6a5801fd.9fd3d"
             ]
         ]
     },
     {
-        "id": "d2405420.f39288",
+        "id": "a614791d.c7e188",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "aerosol",
         "props": [
             {
@@ -505,7 +504,7 @@
             },
             {
                 "p": "count",
-                "v": "2",
+                "v": "3",
                 "vt": "num"
             },
             {
@@ -544,16 +543,14 @@
         "x": 140,
         "y": 160,
         "wires": [
-            [
-                "f6204bb9.99a4c8"
-            ]
+            []
         ]
     },
     {
-        "id": "428b930.6d8166c",
+        "id": "dca91db8.ed8e1",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "doors open/close",
         "props": [
             {
@@ -563,7 +560,7 @@
             },
             {
                 "p": "count",
-                "v": "2",
+                "v": "3",
                 "vt": "num"
             },
             {
@@ -590,16 +587,14 @@
         "x": 170,
         "y": 280,
         "wires": [
-            [
-                "9616ecde.e35dd"
-            ]
+            []
         ]
     },
     {
-        "id": "b63363b2.7e38a",
+        "id": "8e8069e8.ebdfd8",
         "type": "inject",
-        "z": "7ddd1e7d.17547",
-        "g": "ccd4d6f.8438c28",
+        "z": "262a4e73.99b412",
+        "g": "94329e0b.58842",
         "name": "windows open/close",
         "props": [
             {
@@ -609,7 +604,7 @@
             },
             {
                 "p": "count",
-                "v": "6",
+                "v": "3",
                 "vt": "num"
             },
             {
@@ -636,16 +631,14 @@
         "x": 180,
         "y": 320,
         "wires": [
-            [
-                "9616ecde.e35dd"
-            ]
+            []
         ]
     },
     {
-        "id": "93a0bb1f.4903d8",
+        "id": "5433e20c.e14aec",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "3e06646.14fbe9c",
+        "z": "262a4e73.99b412",
+        "g": "4cd80b54.dad114",
         "name": "floor_3",
         "rules": [
             {
@@ -665,15 +658,15 @@
         "y": 540,
         "wires": [
             [
-                "ec30ddc8.586b6"
+                "972801f4.6b272"
             ]
         ]
     },
     {
-        "id": "f6204bb9.99a4c8",
+        "id": "1fd6ff8b.aa5b4",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "b272495f.537278",
+        "z": "262a4e73.99b412",
+        "g": "8cb664b3.b35b88",
         "name": "mqtt",
         "rules": [
             {
@@ -693,15 +686,15 @@
         "y": 140,
         "wires": [
             [
-                "775308d3.1601b8"
+                "a6d87f77.9af52"
             ]
         ]
     },
     {
-        "id": "9616ecde.e35dd",
+        "id": "dca31d2e.afa79",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "b272495f.537278",
+        "z": "262a4e73.99b412",
+        "g": "8cb664b3.b35b88",
         "name": "coap",
         "rules": [
             {
@@ -720,16 +713,14 @@
         "x": 430,
         "y": 260,
         "wires": [
-            [
-                "775308d3.1601b8"
-            ]
+            []
         ]
     },
     {
-        "id": "546a3ec7.0c9dd",
+        "id": "8f1f9699.450bc8",
         "type": "change",
-        "z": "7ddd1e7d.17547",
-        "g": "b272495f.537278",
+        "z": "262a4e73.99b412",
+        "g": "8cb664b3.b35b88",
         "name": "http",
         "rules": [
             {
@@ -749,15 +740,15 @@
         "y": 200,
         "wires": [
             [
-                "775308d3.1601b8"
+                "a6d87f77.9af52"
             ]
         ]
     },
     {
-        "id": "bc243f2f.09765",
+        "id": "10327288.0d6f1d",
         "type": "switch",
-        "z": "7ddd1e7d.17547",
-        "g": "cc4d1037.7f9ad",
+        "z": "262a4e73.99b412",
+        "g": "bdfeae3c.2774",
         "name": "protocol",
         "property": "protocol",
         "propertyType": "msg",
@@ -785,41 +776,41 @@
         "y": 500,
         "wires": [
             [
-                "f5c00f1b.d9726"
+                "65c1cc32.6d45e4"
             ],
             [
-                "9a7c25ac.063228"
+                "6d1a03e5.0236cc"
             ],
             [
-                "561b4b4d.8836f4"
+                "e43331d9.edc1c"
             ]
         ]
     },
     {
-        "id": "9a7c25ac.063228",
+        "id": "6d1a03e5.0236cc",
         "type": "mqtt out",
-        "z": "7ddd1e7d.17547",
-        "g": "cc4d1037.7f9ad",
+        "z": "262a4e73.99b412",
+        "g": "bdfeae3c.2774",
         "name": "building",
         "topic": "",
         "qos": "",
         "retain": "",
-        "broker": "fb9c27f6.b4a0e8",
+        "broker": "7f05a107.a8ce6",
         "x": 940,
         "y": 500,
         "wires": []
     },
     {
-        "id": "f5c00f1b.d9726",
+        "id": "65c1cc32.6d45e4",
         "type": "http request",
-        "z": "7ddd1e7d.17547",
-        "g": "cc4d1037.7f9ad",
+        "z": "262a4e73.99b412",
+        "g": "bdfeae3c.2774",
         "name": "",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "body",
         "url": "",
-        "tls": "",
+        "tls": "a9a6a165.c29ff",
         "persist": false,
         "proxy": "",
         "authType": "",
@@ -830,10 +821,10 @@
         ]
     },
     {
-        "id": "561b4b4d.8836f4",
+        "id": "e43331d9.edc1c",
         "type": "coap request",
-        "z": "7ddd1e7d.17547",
-        "g": "cc4d1037.7f9ad",
+        "z": "262a4e73.99b412",
+        "g": "bdfeae3c.2774",
         "method": "POST",
         "observe": false,
         "url": "",
@@ -847,9 +838,9 @@
         ]
     },
     {
-        "id": "9ac9d2b0.2d42f",
+        "id": "d0cee8a2.a7dc28",
         "type": "comment",
-        "z": "7ddd1e7d.17547",
+        "z": "262a4e73.99b412",
         "name": "env vars",
         "info": "We need to set\n\n```\nexport MF_FLOOR_1=<chan_1_id>\nexport MF_FLOOR_2=<chan_2_id>\nexport MF_FLOOR_3=<chan_3_id>\n\nexport MF_HTTP=<thing_1_key>\nexport MF_MQTT_USR=<thing_2_id>\nexport MF_MQTT_PASS=<thing_2_key>\nexport MF_COAP=<thing_3_key>\n```\n\nWhere \"chan\" and \"thing\" refer to mainflux things.",
         "x": 400,
@@ -857,11 +848,11 @@
         "wires": []
     },
     {
-        "id": "fb9c27f6.b4a0e8",
+        "id": "7f05a107.a8ce6",
         "type": "mqtt-broker",
         "z": "",
         "name": "building",
-        "broker": "localhost",
+        "broker": "demo.mainflux.com",
         "port": "1883",
         "clientid": "",
         "usetls": false,
@@ -877,5 +868,19 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "a9a6a165.c29ff",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "thing.crt",
+        "keyname": "thing.key",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false
     }
 ]
