@@ -61,13 +61,12 @@
         },
         "nodes": [
             "f4ea48.144a75b8",
-            "f0fd5739.48bb68",
-            "6c955736.55e998"
+            "f0fd5739.48bb68"
         ],
         "x": 354,
         "y": 139,
         "w": 152,
-        "h": 202
+        "h": 142
     },
     {
         "id": "3b32028f.c5cafe",
@@ -130,7 +129,7 @@
         "x": 654,
         "y": 439,
         "w": 372,
-        "h": 242
+        "h": 202
     },
     {
         "id": "9d041c6a.518f7",
@@ -408,10 +407,10 @@
         "z": "3dda97fe.57f4b8",
         "g": "3e36c819.54c7f8",
         "name": "topic",
-        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    \n    // mqtt\n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    topic += subtopic;\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    var url = flow.get(\"MF_URL\");\n    \n    // http & coap\n    var addPrefix = msg.protocol == \"http\" ?\n        `https://${url}/http/` : `coap://${url}/`;\n    var addrSuffix = `channels/${msg.channel}/messages`;\n    message.url = addPrefix + addrSuffix + subtopic;\n    \n    if (msg.protocol == \"http\") {\n        message.headers = headers;\n    } else if (msg.protocol == \"coap\") {\n        message.url += coapAuth;\n    }\n    \n})\n\n\nreturn [msgs];",
+        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    topic += subtopic;\n    \n    // mqtt\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    // http\n    message.url = `https://${flow.get(\"MF_URL\")}/http/` + topic;\n    message.headers = headers;\n})\n\nreturn [msgs];",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": flow.get(\"MF_HTTP\")\n};\ncoapAuth = `?auth=${flow.get(\"MF_COAP\")}`;",
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": flow.get(\"MF_HTTP\")\n};",
         "finalize": "",
         "x": 410,
         "y": 540,
@@ -462,8 +461,7 @@
         "y": 540,
         "wires": [
             [
-                "5e5c97.ed39f368",
-                "fd6286c2.182ef8"
+                "5e5c97.ed39f368"
             ]
         ]
     },
@@ -808,33 +806,7 @@
         "raw-buffer": false,
         "name": "coap",
         "x": 910,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6c955736.55e998",
-        "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "2a135a68.945e66",
-        "name": "coap",
-        "rules": [
-            {
-                "t": "set",
-                "p": "protocol",
-                "pt": "msg",
-                "to": "coap",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 300,
+        "y": 600,
         "wires": [
             []
         ]
@@ -869,7 +841,7 @@
         "type": "function",
         "z": "3dda97fe.57f4b8",
         "name": "flow.set",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"cad4eb8e-0a7d-4200-8fa0-8ad98229d800\");\nflow.set(\"MF_FLOOR_2\", \"b7dd4e4a-0da9-47e1-8fbd-d6009eeadb2d\");\nflow.set(\"MF_FLOOR_3\", \"5bb40a7d-f13f-4eea-bf8c-1dea19e2c30c\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"8eea9660-461d-4085-9234-56ade72391f7\"); \n\n// mqtt thing id & key\n// flow.set(\"MF_MQTT_USR\", \"761bec6a-0252-49f8-8ea7-2ddfd4bcc5c0\");\n// flow.set(\"MF_MQTT_PASS\", \"2eb8f7c2-5931-4f6c-833c-a160869a994f\");\n\n// coap thing key\nflow.set(\"MF_COAP\", \"\");\n\nflow.set(\"MF_URL\", \"demo.mainflux.com\");\n\nreturn msg;",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"cad4eb8e-0a7d-4200-8fa0-8ad98229d800\");\nflow.set(\"MF_FLOOR_2\", \"b7dd4e4a-0da9-47e1-8fbd-d6009eeadb2d\");\nflow.set(\"MF_FLOOR_3\", \"5bb40a7d-f13f-4eea-bf8c-1dea19e2c30c\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"8eea9660-461d-4085-9234-56ade72391f7\"); \n\nflow.set(\"MF_URL\", \"demo.mainflux.com\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -907,7 +879,7 @@
         "type": "comment",
         "z": "3dda97fe.57f4b8",
         "name": "mqtt credentials",
-        "info": "## http\nGenerate certificates in bash. Set certificates in node-red.\n\n## mqtt\nSet username and password fields with Mainflux thing key and id representing mqtt publisher.",
+        "info": "## http\nGenerate certificates in bash. Set certificates in node-red.\n\n## mqtt\nSet mqtt node username and password fields with \n\n${MF_MQTT_USER}\n${MF_MQTT_PASS}\n\nenv vars.",
         "x": 1120,
         "y": 480,
         "wires": []
