@@ -1,98 +1,55 @@
 [
     {
-        "id": "3dda97fe.57f4b8",
+        "id": "9cc8bab8.422b58",
         "type": "tab",
         "label": "Building",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "186cf421.eb20bc",
+        "id": "1e21ccf6.e32523",
         "type": "group",
-        "z": "3dda97fe.57f4b8",
-        "name": "",
-        "style": {
-            "fill": "#c8e7a7",
-            "label": true
-        },
-        "nodes": [
-            "9d041c6a.518f7",
-            "c7bc3788.bd4de8",
-            "4a4b8426.d0149c",
-            "cd7688a7.d7a3b8",
-            "bb8cfdc6.a20dc",
-            "d5fe9d46.33a84"
-        ],
-        "x": 34,
-        "y": 79,
-        "w": 272,
-        "h": 322
-    },
-    {
-        "id": "22fe6ce5.9756f4",
-        "type": "group",
-        "z": "3dda97fe.57f4b8",
-        "name": "floors",
-        "style": {
-            "fill": "#b797cf",
-            "label": true,
-            "stroke": "#a4a4a4",
-            "color": "#777777"
-        },
-        "nodes": [
-            "59eabe06.354b4",
-            "aff9a035.dcc25",
-            "f680f931.eedc78",
-            "fdf9cca7.34a99"
-        ],
-        "x": 114,
-        "y": 459,
-        "w": 212,
-        "h": 202
-    },
-    {
-        "id": "2a135a68.945e66",
-        "type": "group",
-        "z": "3dda97fe.57f4b8",
+        "z": "9cc8bab8.422b58",
         "name": "",
         "style": {
             "fill": "#d1d1d1",
             "label": true
         },
         "nodes": [
-            "f4ea48.144a75b8",
-            "f0fd5739.48bb68"
+            "e2b23358.aa3d4",
+            "d45449de.13ba58"
         ],
         "x": 354,
-        "y": 139,
+        "y": 159,
         "w": 152,
         "h": 142
     },
     {
-        "id": "3b32028f.c5cafe",
+        "id": "4ba3bc1d.e5d164",
         "type": "group",
-        "z": "3dda97fe.57f4b8",
-        "name": "payload",
+        "z": "9cc8bab8.422b58",
+        "name": "protocols",
         "style": {
-            "fill": "#7fb7df",
+            "fill": "#c8e7a7",
             "label": true,
             "color": "#777777"
         },
         "nodes": [
-            "5b735403.6ac4cc",
-            "105be13c.47cd0f",
-            "9efaaf28.d8041",
-            "95d49463.259c68"
+            "566ba8c1.c52658",
+            "f95a5ef6.d2a36",
+            "532439f8.d80c98",
+            "302d4956.5d97c6",
+            "8d0172b7.d9d35"
         ],
-        "x": 554,
-        "y": 139,
-        "w": 552,
-        "h": 122
+        "x": 614,
+        "y": 419,
+        "w": 392,
+        "h": 202
     },
     {
-        "id": "3e36c819.54c7f8",
+        "id": "a76816b6.8dc578",
         "type": "group",
-        "z": "3dda97fe.57f4b8",
+        "z": "9cc8bab8.422b58",
         "name": "message",
         "style": {
             "stroke": "#a4a4a4",
@@ -101,41 +58,85 @@
             "color": "#777777"
         },
         "nodes": [
-            "ecd5196a.d6d948",
-            "b70de91.ad1c018",
-            "1f349ddf.ebcdd2"
+            "82a174e8.1bd4c8",
+            "319f8951.e6d796",
+            "64921d5d.31ac14"
         ],
-        "x": 334,
-        "y": 499,
+        "x": 314,
+        "y": 479,
         "w": 272,
         "h": 122
     },
     {
-        "id": "97c5c963.a80728",
+        "id": "b83b6144.2bb6c",
         "type": "group",
-        "z": "3dda97fe.57f4b8",
-        "name": "protocols",
+        "z": "9cc8bab8.422b58",
+        "name": "floors",
+        "style": {
+            "fill": "#b797cf",
+            "label": true,
+            "stroke": "#a4a4a4",
+            "color": "#777777"
+        },
+        "nodes": [
+            "ce75f87a.6f0a28",
+            "1bb28aaf.b08e65",
+            "d81260b9.e3177",
+            "b2206ecf.cae3d"
+        ],
+        "x": 94,
+        "y": 439,
+        "w": 212,
+        "h": 202
+    },
+    {
+        "id": "dd1a3c75.5a8e7",
+        "type": "group",
+        "z": "9cc8bab8.422b58",
+        "name": "",
         "style": {
             "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "ec1c7001.c33d4",
+            "40cda9b2.2e8ab8",
+            "d72461c7.48b2c",
+            "cbcaf42.b72e308",
+            "1229b507.9d856b",
+            "96e60311.4f463"
+        ],
+        "x": 34,
+        "y": 99,
+        "w": 272,
+        "h": 322
+    },
+    {
+        "id": "e2533288.b1453",
+        "type": "group",
+        "z": "9cc8bab8.422b58",
+        "name": "payload",
+        "style": {
+            "fill": "#7fb7df",
             "label": true,
             "color": "#777777"
         },
         "nodes": [
-            "fd6286c2.182ef8",
-            "c4ec9193.21a0a",
-            "5bc3e79.5eaf718",
-            "1fd4bdb7.64c9f2"
+            "cc708eeb.e2bb9",
+            "6e8325f3.66c95c",
+            "746639a8.3ee678",
+            "9dc28570.416488"
         ],
-        "x": 654,
-        "y": 439,
-        "w": 372,
-        "h": 202
+        "x": 554,
+        "y": 159,
+        "w": 552,
+        "h": 122
     },
     {
-        "id": "9d041c6a.518f7",
+        "id": "ec1c7001.c33d4",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "temperature",
         "props": [
             {
@@ -177,7 +178,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "15",
+        "repeat": "10",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -185,18 +186,18 @@
         "payload": "0",
         "payloadType": "num",
         "x": 160,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
-                "f4ea48.144a75b8"
+                "e2b23358.aa3d4"
             ]
         ]
     },
     {
-        "id": "9efaaf28.d8041",
+        "id": "746639a8.3ee678",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "g": "3b32028f.c5cafe",
+        "z": "9cc8bab8.422b58",
+        "g": "e2533288.b1453",
         "name": "compute_float",
         "func": "for (var i = 0; i < msg.count; i++) {\n    var offLimits = Math.random() < msg.offLimitsProb;\n    var range = msg.max - msg.min;\n    var val = msg.min + range * Math.random();\n    if (offLimits) {\n        var sign = Math.random() > 0.5 ? 1 : -1;\n        val = sign * range * Math.random() * msg.offLimitsProb;\n        if (sign < 0) val += msg.min;\n        else val += msg.max;\n    }\n    msg.payload[i] = val;\n}\nreturn msg;",
         "outputs": 1,
@@ -204,18 +205,18 @@
         "initialize": "",
         "finalize": "",
         "x": 820,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
-                "5b735403.6ac4cc"
+                "cc708eeb.e2bb9"
             ]
         ]
     },
     {
-        "id": "c7bc3788.bd4de8",
+        "id": "40cda9b2.2e8ab8",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "humidity",
         "props": [
             {
@@ -248,7 +249,7 @@
             },
             {
                 "p": "offLimitsProb",
-                "v": "0.2",
+                "v": "0.1",
                 "vt": "str"
             },
             {
@@ -265,16 +266,16 @@
         "payload": "0",
         "payloadType": "num",
         "x": 140,
-        "y": 160,
+        "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "4a4b8426.d0149c",
+        "id": "d72461c7.48b2c",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "rooms occupancy",
         "props": [
             {
@@ -289,7 +290,7 @@
             },
             {
                 "p": "deltaTime",
-                "v": "0.3",
+                "v": "0.5",
                 "vt": "num"
             },
             {
@@ -297,7 +298,7 @@
             },
             {
                 "p": "trueProb",
-                "v": "0.7",
+                "v": "0.8",
                 "vt": "str"
             }
         ],
@@ -309,18 +310,18 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 170,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
-                "f0fd5739.48bb68"
+                "d45449de.13ba58"
             ]
         ]
     },
     {
-        "id": "105be13c.47cd0f",
+        "id": "6e8325f3.66c95c",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "g": "3b32028f.c5cafe",
+        "z": "9cc8bab8.422b58",
+        "g": "e2533288.b1453",
         "name": "compute_bool",
         "func": "for (var i = 0; i < msg.count; i++) {\n    msg.payload[i] = Math.random() < msg.trueProb ? true : false;\n}\n\nreturn msg;",
         "outputs": 1,
@@ -328,18 +329,18 @@
         "initialize": "",
         "finalize": "",
         "x": 820,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
-                "5b735403.6ac4cc"
+                "cc708eeb.e2bb9"
             ]
         ]
     },
     {
-        "id": "5b735403.6ac4cc",
+        "id": "cc708eeb.e2bb9",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "g": "3b32028f.c5cafe",
+        "z": "9cc8bab8.422b58",
+        "g": "e2533288.b1453",
         "name": "create_payload",
         "func": "for (var i = 0; i < msg.count; i++) {\n    payload = {\n        \"bn\": msg.basename,\n        \"n\": `${i+1}`, \n        \"u\": msg.unit,\n        \"t\": new Date().getTime() / 1000 + msg.deltaTime * i,\n    };\n    \n    var msgPayload = msg.payload[i]\n    switch(typeof(msgPayload)) {\n        case \"number\":\n            payload[\"v\"] = msgPayload;\n            break;    \n        case \"boolean\": \n            payload[\"vb\"] = msgPayload;\n            break;\n        case \"string\":\n            payload[\"vs\"] = msgPayload;\n            break;\n        default:\n            payload[\"v\"] = msgPayload;\n    }\n    \n    msg.payload[i] = payload;\n}\n\nreturn msg;",
         "outputs": 1,
@@ -347,19 +348,19 @@
         "initialize": "",
         "finalize": "",
         "x": 1000,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
-                "59eabe06.354b4",
-                "aff9a035.dcc25",
-                "f680f931.eedc78"
+                "ce75f87a.6f0a28",
+                "1bb28aaf.b08e65",
+                "d81260b9.e3177"
             ]
         ]
     },
     {
-        "id": "5e5c97.ed39f368",
+        "id": "3f1bcf3c.914f",
         "type": "debug",
-        "z": "3dda97fe.57f4b8",
+        "z": "9cc8bab8.422b58",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -369,15 +370,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 740,
+        "x": 690,
+        "y": 680,
         "wires": []
     },
     {
-        "id": "59eabe06.354b4",
+        "id": "ce75f87a.6f0a28",
         "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "22fe6ce5.9756f4",
+        "z": "9cc8bab8.422b58",
+        "g": "b83b6144.2bb6c",
         "name": "floor_1",
         "rules": [
             {
@@ -393,38 +394,38 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
-        "y": 500,
+        "x": 170,
+        "y": 480,
         "wires": [
             [
-                "ecd5196a.d6d948"
+                "82a174e8.1bd4c8"
             ]
         ]
     },
     {
-        "id": "ecd5196a.d6d948",
+        "id": "82a174e8.1bd4c8",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "g": "3e36c819.54c7f8",
+        "z": "9cc8bab8.422b58",
+        "g": "a76816b6.8dc578",
         "name": "topic",
-        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    topic += subtopic;\n    \n    // mqtt\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    // http\n    message.url = `https://${flow.get(\"MF_URL\")}/http/` + topic;\n    message.headers = headers;\n})\n\nreturn [msgs];",
+        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    topic += subtopic;\n    \n    // mqtt\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    // http\n    message.url = `http://${flow.get(\"MF_URL\")}/http/` + topic;\n    message.headers = headers;\n})\n\nreturn [msgs];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": flow.get(\"MF_HTTP\")\n};",
         "finalize": "",
-        "x": 410,
-        "y": 540,
+        "x": 390,
+        "y": 520,
         "wires": [
             [
-                "b70de91.ad1c018"
+                "319f8951.e6d796"
             ]
         ]
     },
     {
-        "id": "aff9a035.dcc25",
+        "id": "1bb28aaf.b08e65",
         "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "22fe6ce5.9756f4",
+        "z": "9cc8bab8.422b58",
+        "g": "b83b6144.2bb6c",
         "name": "floor_2",
         "rules": [
             {
@@ -440,36 +441,37 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
-        "y": 540,
+        "x": 170,
+        "y": 520,
         "wires": [
             [
-                "ecd5196a.d6d948"
+                "82a174e8.1bd4c8"
             ]
         ]
     },
     {
-        "id": "b70de91.ad1c018",
+        "id": "319f8951.e6d796",
         "type": "json",
-        "z": "3dda97fe.57f4b8",
-        "g": "3e36c819.54c7f8",
+        "z": "9cc8bab8.422b58",
+        "g": "a76816b6.8dc578",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 530,
-        "y": 540,
+        "x": 510,
+        "y": 520,
         "wires": [
             [
-                "5e5c97.ed39f368"
+                "3f1bcf3c.914f",
+                "566ba8c1.c52658"
             ]
         ]
     },
     {
-        "id": "95d49463.259c68",
+        "id": "9dc28570.416488",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "g": "3b32028f.c5cafe",
+        "z": "9cc8bab8.422b58",
+        "g": "e2533288.b1453",
         "name": "route_msg",
         "func": "msg.count = msg.count || 1;\nmsg.deltaTime = msg.deltaTime || 0;\n\n// https://nodered.org/docs/user-guide/writing-functions#multiple-outputs\nvar msgArray = [null, null]; // outputs\nswitch(typeof(msg.payload)) {\n    case \"number\":\n        msgArray[0] = msg; // send to output 1\n        break;\n    case \"boolean\":\n        msgArray[1] = msg; // send to output 2\n        break;\n    default:\n        msgArray[0] = msg;\n        break;    \n}\n\nmsg.payload = [] // SenML array;\n\nreturn msgArray;",
         "outputs": 2,
@@ -477,21 +479,21 @@
         "initialize": "",
         "finalize": "",
         "x": 650,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
-                "9efaaf28.d8041"
+                "746639a8.3ee678"
             ],
             [
-                "105be13c.47cd0f"
+                "6e8325f3.66c95c"
             ]
         ]
     },
     {
-        "id": "cd7688a7.d7a3b8",
+        "id": "cbcaf42.b72e308",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "aerosol",
         "props": [
             {
@@ -524,12 +526,12 @@
             },
             {
                 "p": "offLimitsProb",
-                "v": "0.2",
+                "v": "0.1",
                 "vt": "str"
             },
             {
                 "p": "unit",
-                "v": "μg/m",
+                "v": "μg/m3",
                 "vt": "str"
             }
         ],
@@ -541,16 +543,16 @@
         "payload": "0",
         "payloadType": "num",
         "x": 140,
-        "y": 200,
+        "y": 220,
         "wires": [
             []
         ]
     },
     {
-        "id": "bb8cfdc6.a20dc",
+        "id": "1229b507.9d856b",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "doors open/close",
         "props": [
             {
@@ -573,11 +575,11 @@
             },
             {
                 "p": "trueProb",
-                "v": "0.3",
+                "v": "0.5",
                 "vt": "str"
             }
         ],
-        "repeat": "15",
+        "repeat": "3",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -585,16 +587,18 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 170,
-        "y": 320,
+        "y": 340,
         "wires": [
-            []
+            [
+                "d45449de.13ba58"
+            ]
         ]
     },
     {
-        "id": "d5fe9d46.33a84",
+        "id": "96e60311.4f463",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
-        "g": "186cf421.eb20bc",
+        "z": "9cc8bab8.422b58",
+        "g": "dd1a3c75.5a8e7",
         "name": "windows open/close",
         "props": [
             {
@@ -617,11 +621,11 @@
             },
             {
                 "p": "trueProb",
-                "v": "0.2",
+                "v": "0.5",
                 "vt": "str"
             }
         ],
-        "repeat": "8",
+        "repeat": "20",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -629,16 +633,18 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 180,
-        "y": 360,
+        "y": 380,
         "wires": [
-            []
+            [
+                "d45449de.13ba58"
+            ]
         ]
     },
     {
-        "id": "f680f931.eedc78",
+        "id": "d81260b9.e3177",
         "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "22fe6ce5.9756f4",
+        "z": "9cc8bab8.422b58",
+        "g": "b83b6144.2bb6c",
         "name": "floor_3",
         "rules": [
             {
@@ -654,19 +660,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
-        "y": 580,
+        "x": 170,
+        "y": 560,
         "wires": [
             [
-                "ecd5196a.d6d948"
+                "82a174e8.1bd4c8"
             ]
         ]
     },
     {
-        "id": "f4ea48.144a75b8",
+        "id": "e2b23358.aa3d4",
         "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "2a135a68.945e66",
+        "z": "9cc8bab8.422b58",
+        "g": "1e21ccf6.e32523",
         "name": "mqtt",
         "rules": [
             {
@@ -683,18 +689,18 @@
         "to": "",
         "reg": false,
         "x": 430,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
-                "95d49463.259c68"
+                "9dc28570.416488"
             ]
         ]
     },
     {
-        "id": "f0fd5739.48bb68",
+        "id": "d45449de.13ba58",
         "type": "change",
-        "z": "3dda97fe.57f4b8",
-        "g": "2a135a68.945e66",
+        "z": "9cc8bab8.422b58",
+        "g": "1e21ccf6.e32523",
         "name": "http",
         "rules": [
             {
@@ -711,18 +717,18 @@
         "to": "",
         "reg": false,
         "x": 430,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
-                "95d49463.259c68"
+                "9dc28570.416488"
             ]
         ]
     },
     {
-        "id": "fd6286c2.182ef8",
+        "id": "566ba8c1.c52658",
         "type": "switch",
-        "z": "3dda97fe.57f4b8",
-        "g": "97c5c963.a80728",
+        "z": "9cc8bab8.422b58",
+        "g": "4ba3bc1d.e5d164",
         "name": "protocol",
         "property": "protocol",
         "propertyType": "msg",
@@ -747,74 +753,74 @@
         "repair": false,
         "outputs": 3,
         "x": 740,
-        "y": 540,
+        "y": 520,
         "wires": [
             [
-                "5bc3e79.5eaf718"
+                "532439f8.d80c98"
             ],
             [
-                "c4ec9193.21a0a"
+                "f95a5ef6.d2a36"
             ],
             [
-                "1fd4bdb7.64c9f2"
+                "302d4956.5d97c6"
             ]
         ]
     },
     {
-        "id": "c4ec9193.21a0a",
+        "id": "f95a5ef6.d2a36",
         "type": "mqtt out",
-        "z": "3dda97fe.57f4b8",
-        "g": "97c5c963.a80728",
+        "z": "9cc8bab8.422b58",
+        "g": "4ba3bc1d.e5d164",
         "name": "building",
         "topic": "",
         "qos": "",
         "retain": "",
-        "broker": "17232ecb.f77f81",
-        "x": 920,
-        "y": 540,
+        "broker": "2351332e.45998c",
+        "x": 900,
+        "y": 520,
         "wires": []
     },
     {
-        "id": "5bc3e79.5eaf718",
+        "id": "532439f8.d80c98",
         "type": "http request",
-        "z": "3dda97fe.57f4b8",
-        "g": "97c5c963.a80728",
+        "z": "9cc8bab8.422b58",
+        "g": "4ba3bc1d.e5d164",
         "name": "",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "body",
         "url": "",
-        "tls": "6b916c83.65f024",
+        "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 930,
-        "y": 480,
+        "x": 910,
+        "y": 460,
         "wires": [
             []
         ]
     },
     {
-        "id": "1fd4bdb7.64c9f2",
+        "id": "302d4956.5d97c6",
         "type": "coap request",
-        "z": "3dda97fe.57f4b8",
-        "g": "97c5c963.a80728",
+        "z": "9cc8bab8.422b58",
+        "g": "4ba3bc1d.e5d164",
         "method": "POST",
         "observe": false,
         "url": "",
         "content-format": "text/plain",
         "raw-buffer": false,
         "name": "coap",
-        "x": 910,
-        "y": 600,
+        "x": 890,
+        "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "71b47770.39fbc8",
+        "id": "ad678ff2.684a5",
         "type": "inject",
-        "z": "3dda97fe.57f4b8",
+        "z": "9cc8bab8.422b58",
         "name": "flow.set trigger",
         "props": [
             {
@@ -832,60 +838,77 @@
         "y": 40,
         "wires": [
             [
-                "ff790d17.a6228"
+                "78f909cb.ee0ab8"
             ]
         ]
     },
     {
-        "id": "ff790d17.a6228",
+        "id": "78f909cb.ee0ab8",
         "type": "function",
-        "z": "3dda97fe.57f4b8",
-        "name": "flow.set",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"cad4eb8e-0a7d-4200-8fa0-8ad98229d800\");\nflow.set(\"MF_FLOOR_2\", \"b7dd4e4a-0da9-47e1-8fbd-d6009eeadb2d\");\nflow.set(\"MF_FLOOR_3\", \"5bb40a7d-f13f-4eea-bf8c-1dea19e2c30c\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"8eea9660-461d-4085-9234-56ade72391f7\"); \n\nflow.set(\"MF_URL\", \"demo.mainflux.com\");\n\nreturn msg;",
+        "z": "9cc8bab8.422b58",
+        "name": "flow.set demo",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"cad4eb8e-0a7d-4200-8fa0-8ad98229d800\");\nflow.set(\"MF_FLOOR_2\", \"b7dd4e4a-0da9-47e1-8fbd-d6009eeadb2d\");\nflow.set(\"MF_FLOOR_3\", \"5bb40a7d-f13f-4eea-bf8c-1dea19e2c30c\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"8eea9660-461d-4085-9234-56ade72391f7\"); \nflow.set(\"MF_URL\", \"demo.mainflux.com\");\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 280,
-        "y": 40,
+        "x": 320,
+        "y": 20,
         "wires": [
             []
         ]
     },
     {
-        "id": "fdf9cca7.34a99",
+        "id": "b2206ecf.cae3d",
         "type": "comment",
-        "z": "3dda97fe.57f4b8",
-        "g": "22fe6ce5.9756f4",
+        "z": "9cc8bab8.422b58",
+        "g": "b83b6144.2bb6c",
         "name": "floor_n flow.get",
         "info": "",
-        "x": 220,
-        "y": 620,
+        "x": 200,
+        "y": 600,
         "wires": []
     },
     {
-        "id": "1f349ddf.ebcdd2",
+        "id": "64921d5d.31ac14",
         "type": "comment",
-        "z": "3dda97fe.57f4b8",
-        "g": "3e36c819.54c7f8",
-        "name": "url & http/coap flow.get",
+        "z": "9cc8bab8.422b58",
+        "g": "a76816b6.8dc578",
+        "name": "url & http flow.get",
         "info": "",
-        "x": 460,
-        "y": 580,
+        "x": 420,
+        "y": 560,
         "wires": []
     },
     {
-        "id": "d8fafb7.5b4c008",
+        "id": "8d0172b7.d9d35",
         "type": "comment",
-        "z": "3dda97fe.57f4b8",
-        "name": "mqtt credentials",
-        "info": "## http\nGenerate certificates in bash. Set certificates in node-red.\n\n## mqtt\nSet mqtt node username and password fields with \n\n${MF_MQTT_USER}\n${MF_MQTT_PASS}\n\nenv vars.",
-        "x": 1120,
-        "y": 480,
+        "z": "9cc8bab8.422b58",
+        "g": "4ba3bc1d.e5d164",
+        "name": "http/mqtt credentials",
+        "info": "## http\nGenerate certificates in bash. Set certificates in node-red.\n\n## mqtt\nexport MF_MQTT_SERV= \\\nexport MF_MQTT_USER= \\\nexport MF_MQTT_PASS= \\\n\nSet mqtt node server, username and password fields with \n\n${MF_MQTT_SERV}\n${MF_MQTT_USER}\n${MF_MQTT_PASS}\n\nenv vars.",
+        "x": 730,
+        "y": 460,
         "wires": []
     },
     {
-        "id": "17232ecb.f77f81",
+        "id": "dbcd0064.e069c",
+        "type": "function",
+        "z": "9cc8bab8.422b58",
+        "name": "flow.set local",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"9e209e19-ccf1-4b71-a702-941fe3acf7c3\");\nflow.set(\"MF_FLOOR_2\", \"5d1f4aee-82c2-4457-984b-1ebf3469adfb\");\nflow.set(\"MF_FLOOR_3\", \"9c27a7fa-2996-4e91-91d7-c2b1f1d6cb00\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"422e0e71-8a15-4d0e-83fd-d38f9374618c\"); \nflow.set(\"MF_URL\", \"localhost\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2351332e.45998c",
         "type": "mqtt-broker",
         "z": "",
         "name": "building",
@@ -905,19 +928,5 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
-    },
-    {
-        "id": "6b916c83.65f024",
-        "type": "tls-config",
-        "z": "",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "thing.crt",
-        "keyname": "thing.key",
-        "caname": "ca.crt",
-        "servername": "",
-        "verifyservercert": false
     }
 ]
