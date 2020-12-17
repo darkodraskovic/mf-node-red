@@ -268,7 +268,9 @@
         "x": 140,
         "y": 180,
         "wires": [
-            []
+            [
+                "e2b23358.aa3d4"
+            ]
         ]
     },
     {
@@ -408,7 +410,7 @@
         "z": "9cc8bab8.422b58",
         "g": "a76816b6.8dc578",
         "name": "topic",
-        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    topic += subtopic;\n    \n    // mqtt\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    // http\n    message.url = `http://${flow.get(\"MF_URL\")}/http/` + topic;\n    message.headers = headers;\n})\n\nreturn [msgs];",
+        "func": "msgs = [];\nmsg.payload.forEach(function(payload) {\n    var message = {};\n    msgs.push(message);\n    message.payload = [payload];\n    message.protocol = msg.protocol;\n    \n    var topic = \"channels/\" + msg.channel + \"/messages\";\n    var subtopic = `/room${payload.n}/${msg.basename}`;\n    topic += subtopic;\n    \n    // mqtt\n    if (msg.protocol == \"mqtt\") {\n        message.topic = topic;\n        return;\n    }\n    \n    // http\n    var http = flow.get(\"MF_HTTPS\") ? 'https' : 'http';\n    var url = flow.get(\"MF_URL\");\n    message.url = `${http}://${url}/http/` + topic;\n    message.headers = headers;\n})\n\nreturn [msgs];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is deployed.\nheaders = {\n    \"Authorization\": flow.get(\"MF_HTTP\")\n};",
@@ -462,8 +464,7 @@
         "y": 520,
         "wires": [
             [
-                "3f1bcf3c.914f",
-                "566ba8c1.c52658"
+                "3f1bcf3c.914f"
             ]
         ]
     },
@@ -545,7 +546,9 @@
         "x": 140,
         "y": 220,
         "wires": [
-            []
+            [
+                "e2b23358.aa3d4"
+            ]
         ]
     },
     {
@@ -579,7 +582,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "30",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -625,7 +628,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "20",
+        "repeat": "45",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
@@ -790,7 +793,7 @@
         "ret": "txt",
         "paytoqs": "body",
         "url": "",
-        "tls": "",
+        "tls": "3341d38b.e4e6ec",
         "persist": false,
         "proxy": "",
         "authType": "",
@@ -847,7 +850,7 @@
         "type": "function",
         "z": "9cc8bab8.422b58",
         "name": "flow.set demo",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"cad4eb8e-0a7d-4200-8fa0-8ad98229d800\");\nflow.set(\"MF_FLOOR_2\", \"b7dd4e4a-0da9-47e1-8fbd-d6009eeadb2d\");\nflow.set(\"MF_FLOOR_3\", \"5bb40a7d-f13f-4eea-bf8c-1dea19e2c30c\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"8eea9660-461d-4085-9234-56ade72391f7\"); \nflow.set(\"MF_URL\", \"demo.mainflux.com\");\n\nreturn msg;",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"038774f6-1d37-4dab-9107-487adc3466a4\");\nflow.set(\"MF_FLOOR_2\", \"32628244-4569-45fa-84c8-a4ac4a77f258\");\nflow.set(\"MF_FLOOR_3\", \"7c2cd060-ff49-4849-a544-82789a69e8de\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"96849faa-ff19-47e9-890a-5d29af728fae\"); \nflow.set(\"MF_URL\", \"iot.ashvin.eu\");\n\nflow.set(\"MF_HTTPS\", true);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -896,7 +899,7 @@
         "type": "function",
         "z": "9cc8bab8.422b58",
         "name": "flow.set local",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"9e209e19-ccf1-4b71-a702-941fe3acf7c3\");\nflow.set(\"MF_FLOOR_2\", \"5d1f4aee-82c2-4457-984b-1ebf3469adfb\");\nflow.set(\"MF_FLOOR_3\", \"9c27a7fa-2996-4e91-91d7-c2b1f1d6cb00\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"422e0e71-8a15-4d0e-83fd-d38f9374618c\"); \nflow.set(\"MF_URL\", \"localhost\");\n\nreturn msg;",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"bfef0896-787b-4c22-99f4-e1cccf5ee803\");\nflow.set(\"MF_FLOOR_2\", \"20aa420f-e6c5-4fb4-9581-0ca77ca99f14\");\nflow.set(\"MF_FLOOR_3\", \"f7b137be-63ca-4393-871a-fb5413fba587\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"509d1c29-c0ea-4504-9fe4-c3d5c20a9462\"); \nflow.set(\"MF_URL\", \"localhost\");\n\nflow.set(\"MF_HTTPS\", false);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -912,7 +915,7 @@
         "type": "mqtt-broker",
         "z": "",
         "name": "building",
-        "broker": "demo.mainflux.com",
+        "broker": "iot.ashvin.eu",
         "port": "1883",
         "clientid": "",
         "usetls": false,
@@ -928,5 +931,19 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "3341d38b.e4e6ec",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "thing.crt",
+        "keyname": "thing.key",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false
     }
 ]
