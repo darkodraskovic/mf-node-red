@@ -38,13 +38,12 @@
             "566ba8c1.c52658",
             "f95a5ef6.d2a36",
             "532439f8.d80c98",
-            "302d4956.5d97c6",
             "8d0172b7.d9d35"
         ],
         "x": 614,
         "y": 419,
         "w": 392,
-        "h": 202
+        "h": 149.5
     },
     {
         "id": "a76816b6.8dc578",
@@ -764,9 +763,7 @@
             [
                 "f95a5ef6.d2a36"
             ],
-            [
-                "302d4956.5d97c6"
-            ]
+            []
         ]
     },
     {
@@ -793,29 +790,12 @@
         "ret": "txt",
         "paytoqs": "body",
         "url": "",
-        "tls": "3341d38b.e4e6ec",
+        "tls": "",
         "persist": false,
         "proxy": "",
         "authType": "",
         "x": 910,
         "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "302d4956.5d97c6",
-        "type": "coap request",
-        "z": "9cc8bab8.422b58",
-        "g": "4ba3bc1d.e5d164",
-        "method": "POST",
-        "observe": false,
-        "url": "",
-        "content-format": "text/plain",
-        "raw-buffer": false,
-        "name": "coap",
-        "x": 890,
-        "y": 580,
         "wires": [
             []
         ]
@@ -841,7 +821,7 @@
         "y": 40,
         "wires": [
             [
-                "78f909cb.ee0ab8"
+                "dbcd0064.e069c"
             ]
         ]
     },
@@ -850,7 +830,7 @@
         "type": "function",
         "z": "9cc8bab8.422b58",
         "name": "flow.set demo",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"038774f6-1d37-4dab-9107-487adc3466a4\");\nflow.set(\"MF_FLOOR_2\", \"32628244-4569-45fa-84c8-a4ac4a77f258\");\nflow.set(\"MF_FLOOR_3\", \"7c2cd060-ff49-4849-a544-82789a69e8de\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"96849faa-ff19-47e9-890a-5d29af728fae\"); \nflow.set(\"MF_URL\", \"iot.ashvin.eu\");\n\nflow.set(\"MF_HTTPS\", true);\n\nreturn msg;",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"5cb0be87-3e40-48e5-8780-dd969b532556\");\nflow.set(\"MF_FLOOR_2\", \"7a6aeb4c-4eac-41de-ab50-e2db7387eaf5\");\nflow.set(\"MF_FLOOR_3\", \"44a1ce9b-551a-4d50-86f3-b147d35ae439\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"b358ae06-8f20-4311-8ec3-4ffb11480a29\");\nflow.set(\"MF_URL\", \"localhost\");\n\nflow.set(\"MF_HTTPS\", false);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -899,7 +879,7 @@
         "type": "function",
         "z": "9cc8bab8.422b58",
         "name": "flow.set local",
-        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"bfef0896-787b-4c22-99f4-e1cccf5ee803\");\nflow.set(\"MF_FLOOR_2\", \"20aa420f-e6c5-4fb4-9581-0ca77ca99f14\");\nflow.set(\"MF_FLOOR_3\", \"f7b137be-63ca-4393-871a-fb5413fba587\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"509d1c29-c0ea-4504-9fe4-c3d5c20a9462\"); \nflow.set(\"MF_URL\", \"localhost\");\n\nflow.set(\"MF_HTTPS\", false);\n\nreturn msg;",
+        "func": "// channel ids\nflow.set(\"MF_FLOOR_1\", \"5cb0be87-3e40-48e5-8780-dd969b532556\");\nflow.set(\"MF_FLOOR_2\", \"7a6aeb4c-4eac-41de-ab50-e2db7387eaf5\");\nflow.set(\"MF_FLOOR_3\", \"44a1ce9b-551a-4d50-86f3-b147d35ae439\");\n\n// http thing key\nflow.set(\"MF_HTTP\", \"b358ae06-8f20-4311-8ec3-4ffb11480a29\");\nflow.set(\"MF_URL\", \"localhost\");\n\nflow.set(\"MF_HTTPS\", false);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -913,9 +893,8 @@
     {
         "id": "2351332e.45998c",
         "type": "mqtt-broker",
-        "z": "",
         "name": "building",
-        "broker": "iot.ashvin.eu",
+        "broker": "localhost",
         "port": "1883",
         "clientid": "",
         "usetls": false,
@@ -931,19 +910,5 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
-    },
-    {
-        "id": "3341d38b.e4e6ec",
-        "type": "tls-config",
-        "z": "",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "thing.crt",
-        "keyname": "thing.key",
-        "caname": "ca.crt",
-        "servername": "",
-        "verifyservercert": false
     }
 ]
